@@ -1,0 +1,268 @@
+{{ define "Translate" }}
+<div class="tab-pane h-100" id="translator" role="tabpanel" aria-labelledby="translator-tab">
+    <div class="appnavbar-content-wrapper">
+        <div class="appnavbar-scrollable-wrapper">
+            <div class="appnavbar-heading sticky-top">
+                <ul class="nav justify-content-between align-items-center">
+                    <!-- Sidebar Title Start -->
+                    <li class="text-center">
+                        <h5 class="text-truncate mb-0">Translator</h5>
+                    </li>
+                    <!-- Sidebar Title End -->
+
+                    <!-- Close Sidebar Start -->
+                    <li class="nav-item list-inline-item">
+                        <div data-appcontent-close="">
+                            <!-- Default :: Inline SVG -->
+                            <svg class="hw-22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                                
+                            <!-- Alternate :: External File link -->
+                            <!-- <img class="injectable hw-22" src="/_assets/media/heroicons/outline/x.svg" alt=""> -->
+                        
+                        </div>
+                    </li>
+                    <!-- Close Sidebar End -->
+                </ul>
+            </div>
+
+            <div class="appnavbar-body">
+                <div class="appnavbar-body-title">
+                    <div class="dropdown w-100">
+                        <!-- Dropdown Button Start -->
+                        <button id="sourceLanguageBtn" class="btn btn-outline-default btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</button>
+                        <!-- Dropdown Button End -->
+
+                        <!-- Dropdown Menu Start -->
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Auto</a>
+                            <a class="dropdown-item" href="#">English</a>
+                            <a class="dropdown-item" href="#">Russian</a>
+                            <a class="dropdown-item" href="#">Spanish</a>
+                            <a class="dropdown-item" href="#">French</a>
+                            <a class="dropdown-item" href="#">German</a>
+                            <a class="dropdown-item" href="#">Chinese</a>
+                            <a class="dropdown-item" href="#">Japanese</a>
+                            <a class="dropdown-item" href="#">Latin</a>
+                            <a class="dropdown-item" href="#">Hindi</a>
+                            <a class="dropdown-item" href="#">Irish</a>
+                            <a class="dropdown-item" href="#">Polish</a>
+                            <a class="dropdown-item" href="#">Italian</a>
+                            <a class="dropdown-item" href="#">Portuguese</a>
+                            <a class="dropdown-item" href="#">Arabic</a>
+                            <a class="dropdown-item" href="#">Bengali</a>
+                            <a class="dropdown-item" href="#">Dutch</a>
+                            <a class="dropdown-item" href="#">Greek</a>
+                            <a class="dropdown-item" href="#">Hebrew</a>
+                            <a class="dropdown-item" href="#">Hungarian</a>
+                            <a class="dropdown-item" href="#">Korean</a>
+                            <a class="dropdown-item" href="#">Norwegian</a>
+                            <a class="dropdown-item" href="#">Persian</a>
+                            <a class="dropdown-item" href="#">Romanian</a>
+                            <a class="dropdown-item" href="#">Swedish</a>
+                            <a class="dropdown-item" href="#">Turkish</a>
+                            <a class="dropdown-item" href="#">Ukrainian</a>
+                            <a class="dropdown-item" href="#">Vietnamese</a>
+                            <a class="dropdown-item" href="#">Thai</a>
+                            <a class="dropdown-item" href="#">Czech</a>
+                            <a class="dropdown-item" href="#">Danish</a>
+                            <a class="dropdown-item" href="#">Finnish</a>
+                            <a class="dropdown-item" href="#">Swahili</a>
+                            <a class="dropdown-item" href="#">Malay</a>
+                            <a class="dropdown-item" href="#">Tagalog</a>
+                            <a class="dropdown-item" href="#">Tamil</a>
+                            <a class="dropdown-item" href="#">Telugu</a>
+                            <a class="dropdown-item" href="#">Urdu</a>
+                        </div>
+                        <!-- Dropdown Menu End -->
+                    </div>
+            
+                    <img class="injectable hw-16 text-muted mx-1" src="/_assets/media/heroicons/outline/arrow-right.svg" alt="">
+
+                    <div class="dropdown w-100">
+                        <!-- Dropdown Button Start -->
+                        <button id="targetLanguageBtn" class="btn btn-outline-default btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Latin</button>
+                        <!-- Dropdown Button End -->
+
+                        <!-- Dropdown Menu Start -->
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Auto</a>
+                            <a class="dropdown-item" href="#">English</a>
+                            <a class="dropdown-item" href="#">Russian</a>
+                            <a class="dropdown-item" href="#">Spanish</a>
+                            <a class="dropdown-item" href="#">French</a>
+                            <a class="dropdown-item" href="#">German</a>
+                            <a class="dropdown-item" href="#">Chinese</a>
+                            <a class="dropdown-item" href="#">Japanese</a>
+                            <a class="dropdown-item" href="#">Latin</a>
+                            <a class="dropdown-item" href="#">Hindi</a>
+                            <a class="dropdown-item" href="#">Irish</a>
+                            <a class="dropdown-item" href="#">Polish</a>
+                            <a class="dropdown-item" href="#">Italian</a>
+                            <a class="dropdown-item" href="#">Portuguese</a>
+                            <a class="dropdown-item" href="#">Arabic</a>
+                            <a class="dropdown-item" href="#">Bengali</a>
+                            <a class="dropdown-item" href="#">Dutch</a>
+                            <a class="dropdown-item" href="#">Greek</a>
+                            <a class="dropdown-item" href="#">Hebrew</a>
+                            <a class="dropdown-item" href="#">Hungarian</a>
+                            <a class="dropdown-item" href="#">Korean</a>
+                            <a class="dropdown-item" href="#">Norwegian</a>
+                            <a class="dropdown-item" href="#">Persian</a>
+                            <a class="dropdown-item" href="#">Romanian</a>
+                            <a class="dropdown-item" href="#">Swedish</a>
+                            <a class="dropdown-item" href="#">Turkish</a>
+                            <a class="dropdown-item" href="#">Ukrainian</a>
+                            <a class="dropdown-item" href="#">Vietnamese</a>
+                            <a class="dropdown-item" href="#">Thai</a>
+                            <a class="dropdown-item" href="#">Czech</a>
+                            <a class="dropdown-item" href="#">Danish</a>
+                            <a class="dropdown-item" href="#">Finnish</a>
+                            <a class="dropdown-item" href="#">Swahili</a>
+                            <a class="dropdown-item" href="#">Malay</a>
+                            <a class="dropdown-item" href="#">Tagalog</a>
+                            <a class="dropdown-item" href="#">Tamil</a>
+                            <a class="dropdown-item" href="#">Telugu</a>
+                            <a class="dropdown-item" href="#">Urdu</a>
+                        </div>
+                        <!-- Dropdown Menu End -->
+                    </div>
+                </div>
+
+                <div class="translator-container p-2">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="6" placeholder="Write text here" name="description"></textarea>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="mb-0">output</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="appnavbar-footer">
+                <div class="btn btn-primary btn-block" id="translate">Translate</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/_assets/vendors/jquery/jquery-3.5.0.min.js"></script>
+<script>
+var languageCodes = {
+    "Auto": "auto",
+    "English": "en",
+    "Russian": "ru",
+    "Spanish": "es",
+    "French": "fr",
+    "German": "de",
+    "Chinese": "zh",
+    "Japanese": "ja",
+    "Latin": "la",
+    "Hindi": "hi",
+    "Irish": "ga",
+    "Polish": "pl",
+    "Italian": "it",
+    "Portuguese": "pt",
+    "Arabic": "ar",
+    "Bengali": "bn",
+    "Dutch": "nl",
+    "Greek": "el",
+    "Hebrew": "he",
+    "Hungarian": "hu",
+    "Korean": "ko",
+    "Norwegian": "no",
+    "Persian": "fa",
+    "Romanian": "ro",
+    "Swedish": "sv",
+    "Turkish": "tr",
+    "Ukrainian": "uk",
+    "Vietnamese": "vi",
+    "Thai": "th",
+    "Czech": "cs",
+    "Danish": "da",
+    "Finnish": "fi",
+    "Swahili": "sw",
+    "Malay": "ms",
+    "Tagalog": "tl",
+    "Tamil": "ta",
+    "Telugu": "te",
+    "Urdu": "ur"
+};
+
+$(document).ready(function() {
+    var sourceLanguage = 'pl'; // Default language code for Polish
+    var targetLanguage = 'la'; // Default language code for Latin
+
+    // Handle language selection for source and target languages
+    $('.dropdown-menu a').on('click', function() {
+        var selectedLanguage = $(this).text();
+        var dropdownBtn = $(this).closest('.dropdown').find('.btn');
+
+        dropdownBtn.text(selectedLanguage);
+
+        var languageCode = languageCodes[selectedLanguage]; // Convert to language code
+
+        if (dropdownBtn.attr('id') === 'sourceLanguageBtn') {
+            sourceLanguage = languageCode;
+        } else if (dropdownBtn.attr('id') === 'targetLanguageBtn') {
+            targetLanguage = languageCode;
+        }
+
+        console.log("Source Language Code: " + sourceLanguage);
+        console.log("Target Language Code: " + targetLanguage);
+    });
+
+    // Handle translation button click
+    $(document).ready(function() {
+    var sourceLanguage = 'auto'; // Default language code for automatic detection
+    var targetLanguage = 'la'; // Default language code for Latin
+
+    // Handle language selection for source and target languages
+    $('.dropdown-menu a').on('click', function() {
+        var selectedLanguage = $(this).text();
+        var dropdownBtn = $(this).closest('.dropdown').find('.btn');
+
+        dropdownBtn.text(selectedLanguage);
+
+        var languageCode = languageCodes[selectedLanguage]; // Convert to language code
+
+        if (dropdownBtn.attr('id') === 'sourceLanguageBtn') {
+            sourceLanguage = (selectedLanguage === 'Auto') ? 'auto' : languageCode;
+        } else if (dropdownBtn.attr('id') === 'targetLanguageBtn') {
+            targetLanguage = (selectedLanguage === 'Auto') ? 'auto' : languageCode;
+        }
+
+        console.log("Source Language Code: " + sourceLanguage);
+        console.log("Target Language Code: " + targetLanguage);
+    });
+
+    // Handle translation button click
+    $('#translate').on('click', function() {
+        var sourceText = $('textarea[name="description"]').val();
+        
+        // Perform AJAX request to translate text
+        $.ajax({
+            url: '/api/apps/translate', 
+            type: 'POST',
+            data: JSON.stringify({
+                q: sourceText,
+                source: sourceLanguage,
+                target: targetLanguage
+            }),
+            contentType: 'application/json',
+            success: function(response) {
+                // Update the translation result
+                $('.card-body p').text(response.translatedText);
+            },
+            error: function(xhr, status, error) {
+                console.error('Translation failed:', status, error);
+            }
+        });
+    });
+});
+});
+</script>
+{{ end }}

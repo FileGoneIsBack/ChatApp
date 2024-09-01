@@ -1,0 +1,58 @@
+{{ define "UploadImg" }}  
+<!-- Modal 3 :: Upload Immage -->
+<div class="modal modal-lg-fullscreen fade" id="UploadImg" tabindex="-1" role="dialog" aria-labelledby="createGroupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog-zoom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title js-title-step" id="createGroupLabel">&nbsp;</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body py-0 hide-scrollbar">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label>Choose profile picture</label>
+                        <!-- Wrap input in a form element -->
+                        <form id="uploadForm" enctype="multipart/form-data">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="profilePictureInput" name="file" accept="image/*">
+                                <label class="custom-file-label" for="profilePictureInput">Choose file</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="uploadButton">Save settings</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/_assets/vendors/jquery/jquery-3.5.0.min.js"></script>
+<script>
+$('#uploadButton').on('click', function() {
+    var formData = new FormData($('#uploadForm')[0]);
+
+    // Log each key-value pair in FormData
+    for (var pair of formData.entries()) {
+        console.log(pair[0] + ': ' + pair[1]);
+    }
+
+    $.ajax({
+        url: '/api/functions/avatar',
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(response) {
+            console.log('File uploaded successfully');
+        },
+        error: function(error) {
+            console.error('File upload failed', error);
+        }
+    });
+});
+
+</script>
+{{ end }}

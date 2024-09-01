@@ -1,0 +1,39 @@
+    {{ define "Invite" }}
+       <!-- Modal 3 :: Invite Others -->
+        <div class="modal modal-lg-fullscreen fade" id="inviteOthers" tabindex="-1" role="dialog" aria-labelledby="inviteOthersLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog-zoom">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="inviteOthersLabel">Invite Others</h5>
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body hide-scrollbar">
+                        <form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="inviteEmailAddress">Email address</label>
+                                        <input type="email" class="form-control form-control-md" id="inviteEmailAddress" placeholder="Type email address here" value="">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="inviteMessage">Invitation message</label>
+                                        <textarea class="form-control form-control-md no-resize hide-scrollbar" id="inviteMessage" placeholder="Write your message here" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link text-muted" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send Invitation</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
