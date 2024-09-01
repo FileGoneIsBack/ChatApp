@@ -32,3 +32,9 @@ CREATE TABLE messages (
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
+CREATE TABLE contacts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INT NOT NULL,
+    contact_id INT NOT NULL,
+    status TEXT NOT NULL DEFULT 'pending',
+);
